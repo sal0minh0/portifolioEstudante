@@ -1,10 +1,8 @@
 /* Importar fonte Nunito */
-
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 /* Importar fonte Nunito */
-
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
 
 :root {
   --main-color-01: rebeccapurple;
@@ -14,11 +12,10 @@
   --text-color-03: wheat;
   --bg-color-01: snow; /* Background 1*/
   --bg-color-02: oldlace;
-  --color-00: #0000001a;
+  --color-00: black;
+  --color-11:rgba(253, 245, 230, 0.274);
 
-
-/* Extra */
-
+  /* Extra */
   --color-01: whitesmoke;
   --color-02: lightpink;
   --color-03: linen;
@@ -27,7 +24,6 @@
 }
 
 /* Reset Css */
-
 * {
   margin: 0;
   padding: 0;
@@ -39,21 +35,23 @@
 }
 
 body {
-  background-color: var(--bg-color-01);
+  background-image: url(../assets/xv.png);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: "Merriweather", serif;
   font-weight: 900;
   font-style: normal;
-  font-weight: 200%;
 }
 
-p, a {
+p,
+a {
   font-family: "Nunito", serif;
   font-optical-sizing: auto;
+  font-weight: 400;
   font-style: normal;
-  font-weight: 100%;
 }
 
 header {
@@ -84,7 +82,7 @@ header {
   transition: 0.4s;
 
   border: solid 1px var(--color-04); /* Teste */
-  
+
   font-family: "Nunito", serif;
   font-weight: 300;
   font-optical-sizing: auto;
@@ -117,4 +115,153 @@ span {
 
 .bxl-linkedin-square {
   color: mediumblue;
+}
+
+.home,
+.about {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.home-img img,
+.about-img img {
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+}
+
+.experiences-box img {
+  width: auto;
+  height: auto; 
+  max-width: 100%; 
+  max-height: 60vh; 
+}
+
+.experiences-container:nth-child(2) .experiences-box img {
+  width: 17vw;
+  height: 40vh;
+  margin-bottom: 1rem;
+}
+
+.experiences-container:nth-child(3) .experiences-box img {
+  width: 15vw; 
+}
+
+.home-content,
+.about-content {
+  width: 45%;
+}
+
+.home-content h1,
+.about-content h1 {
+  font-weight: 700;
+  line-height: 1.3;
+
+  font-size: 2.7rem; /* Teste */
+}
+
+.home-content h3,
+.about-content h3 {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.home-content p,
+.about-content p {
+  margin-top: 1.2rem;
+  text-align: justify;
+}
+
+.experiences h2,
+.portfolio h2,
+.contact h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.experiences-container {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.experiences-box {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.experiences-container .experiences-box {
+  flex: 1;
+
+  padding: 1em 1rem;
+  border-radius: 1.2rem;
+  text-align: center;
+  border: outset 0.2rem rgba(119, 119, 119, 0.5);
+  background-color: var(--color-01);
+  transition: 0.5s ease;
+}
+
+.experiences-container .experiences-box:hover {
+  border-color: rgb(94, 0, 0);
+  transform: scale(1.03);
+}
+
+.experiences-box h3 {
+  font-size: 1.5rem;
+}
+
+.experiences-box p {
+  margin: 0.5rem;
+  letter-spacing: 0.1rem;
+
+  /* Para esconder e agrupar as linhas no Leia mais */
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
+
+
+/* Botões */
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.7rem 1.8rem;
+  background-color: var(--main-color-02);
+  border-radius: 2rem;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+
+.btn:hover {
+  box-shadow: 0 0 0.3rem var(--main-color-02);
+  background-color: inherit;
+  color: black;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.portfolio-container {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.portfolio-box{
+  display: flex;
+  position: relative;
+  border-radius: 0.6rem;
+  box-shadow: 0 0 0 0.6rem rgba(0, 0, 0, 0.01);
+  overflow: hidden;
 }
