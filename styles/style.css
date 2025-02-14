@@ -1,7 +1,7 @@
 /* Importar fonte Nunito */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 
-/* Importar fonte Nunito */
+/* Importar fonte Merriweather */
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
 
 :root {
@@ -188,7 +188,7 @@ span {
   flex-direction: row;
   justify-content: center;
   gap: 2rem;
-  flex-wrap: wrap;
+  /*flex-wrap: wrap;*/
 }
 
 .experiences-box {
@@ -254,7 +254,6 @@ span {
 
 .portfolio-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 1.2rem;
 }
 
@@ -421,7 +420,7 @@ footer {
 
 /* Mobile First */
 /* Extra Small Screen - Smartphones (Portrait) */
-@media (min-width: 0px) {
+@media (min-width: 0px) and (max-width: 575px) {
 
   .menu-responsive {
     display: block;
@@ -473,30 +472,43 @@ footer {
   .experiences-box {
     width: 100%;
   }
+
+  .experiences-container:nth-child(2) .experiences-box img {
+    width: auto;
+  }
   
   header {
-    background-color: gray; /*Teste*/
+    background-color: gray; /* Para conseguir ver que está nessa resolução */
   }
 }
 
 /* Small Screen - Smartphones (Landscape) */
-@media (min-width: 576px) {
+@media (min-width: 576px) and (max-width: 767px) {
   .home-img, .about-img {
     width: 65%;
     max-width: 65%;
   } 
 
   .experiences-box {
-    width: 70%;
+    width: 100%;
+  }
+
+  .experiences-container {
+    flex-direction: column;
+    align-items: center;
+  } 
+
+  .experiences-container:nth-child(2) .experiences-box img {
+    width: auto;
   }
 
   header {
-    background-color:green; /*Teste*/
+    background-color:green; /* Para conseguir ver que está nessa resolução */
   }
 }
 
 /* Medium - Tablet */
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 991px) {
   .menu-responsive {
     display: none;
   }
@@ -521,42 +533,84 @@ footer {
   .home-content, .about-content {
     width: 50%;
   }
-  /*
+  
   .experiences-container {
     flex-direction: column;
     align-items: center;
-  } */
+  } 
+
+  .experiences-container:nth-child(2) .experiences-box img {
+    width: auto;
+  }
 
   .experiences-box {
-    width: 60%;
+    width: 100%;
     margin-bottom: 2rem;
   }
 
   .portfolio-container {
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
   }
 
   form .input-box input {
-    width: 50%;
+    width: 49%;
   }
 
+
   header {
-    background-color: purple; /*Teste*/
+    background-color: purple; /* Para conseguir ver que está nessa resolução */
   }
 }
 
 /* Large - Notebook */
-@media (min-width: 992px) {
+@media (min-width: 992px) and (max-width: 1199px) {
+  /*.home-img, .about-img {
+    max-width: 35%;
+  }*/
+
+  .experiences-container {
+    flex-direction: row;
+    gap: 1.2rem;
+
+  }
+
+  .portfolio-container {
+    grid-template-columns: auto auto;
+  }
+
+  .experiences-container:nth-child(2) .experiences-box img {
+    width: auto;
+  }
 
   header {
-    background-color: red; /*Teste*/
+    background-color: red; /* Para conseguir ver que está nessa resolução */
   }
 }
 
 /* Extra Large - Desktop */
 @media (min-width: 1200px) {
 
+  .home-img, .about-img {
+    max-width: 25%;
+  }
+
+  .home-content h1 {
+    font-size: 2.7rem;
+  }
+
+  .home-content h3 {
+    font-size: 2rem;
+  }
+
+  .portfolio-container {
+    grid-template-columns: auto auto auto;
+  }
+
+  .experiences-container:nth-child(2) .experiences-box img {
+    width: auto;
+  }
+
   header {
-    background-color: blue; /*Teste*/
+    background-color: blue; /* Para conseguir ver que está nessa resolução */
   }
 }
