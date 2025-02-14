@@ -485,6 +485,14 @@ footer {
 
 /* Small Screen - Smartphones (Landscape) */
 @media (min-width: 576px) and (max-width: 767px) {
+  .menu-responsive {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+  }
+  
   .home-img, .about-img {
     width: 50%;
     max-width: 50%;
