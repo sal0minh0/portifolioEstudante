@@ -1,5 +1,4 @@
 // Transformar o menu em um menu responsivo
-
 // Armazenar a classe que gerencia o botao
 const menuResponsivo = document.querySelector('.menu-responsive');
 
@@ -24,5 +23,4 @@ function mudarMenu() {
     } else {
         nav.style.display = 'none';
     }
-
 }
