@@ -75,13 +75,22 @@ header {
   cursor: default;
 }
 
-.nav a {
+.nav-responsive {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background-color: gray; /* Teste, verificar se quer essa cor */
+
+}
+
+.nav a, .nav-responsive a {
   font-size: 1.2rem;
   color: rgba(185, 83, 83, 0.6);
   padding: 0.5rem 1rem;
   transition: 0.4s;
-
-  border: solid 1px var(--color-04); /* Teste */
 
   font-family: "Nunito", serif;
   font-weight: 400;
@@ -90,15 +99,13 @@ header {
   font-weight: 100%;
 }
 
-.nav a:hover {
+.nav a:hover, .nav-responsive a:hover {
   color: rgb(185, 0, 0);
 }
 
 section {
   min-height: 100vh;
   padding: 6rem 6rem 2rem;
-
-  border: solid 1px var(--color-04); /* Teste */
 }
 
 span {
@@ -110,7 +117,7 @@ span {
 }
 
 .bxl-whatsapp-square {
-  color: lightgreen; /* ou lime */
+  color: lightgreen;
 }
 
 .bxl-linkedin-square {
@@ -158,8 +165,6 @@ span {
 .about-content h1 {
   font-weight: 700;
   line-height: 1.3;
-
-  font-size: 2.7rem; /* Teste */
 }
 
 .home-content h3,
@@ -188,7 +193,6 @@ span {
   flex-direction: row;
   justify-content: center;
   gap: 2rem;
-  /*flex-wrap: wrap;*/
 }
 
 .experiences-box {
@@ -430,7 +434,7 @@ footer {
     display: none;
   }
 
-  .nav-responsive {
+  .nav-responsive a {
     display: block;
     font-size: 1.2rem;
     margin: 0.5rem 0;
@@ -477,10 +481,6 @@ footer {
   .experiences-container:nth-child(2) .experiences-box img {
     width: auto;
   }
-  
-  header {
-    background-color: gray; /* Para conseguir ver que está nessa resolução */
-  }
 }
 
 /* Small Screen - Smartphones (Landscape) */
@@ -517,10 +517,6 @@ footer {
 
   .experiences-container:nth-child(2) .experiences-box img {
     width: auto;
-  }
-
-  header {
-    background-color:green; /* Para conseguir ver que está nessa resolução */
   }
 }
 
@@ -576,18 +572,10 @@ footer {
   form .input-box input {
     width: 49%;
   }
-
-
-  header {
-    background-color: purple; /* Para conseguir ver que está nessa resolução */
-  }
 }
 
 /* Large - Notebook */
 @media (min-width: 992px) and (max-width: 1199px) {
-  /*.home-img, .about-img {
-    max-width: 35%;
-  }*/
 
   .home-img {
     margin-left: 2rem;
@@ -608,10 +596,6 @@ footer {
 
   .experiences-container:nth-child(2) .experiences-box img {
     width: auto;
-  }
-
-  header {
-    background-color: red; /* Para conseguir ver que está nessa resolução */
   }
 }
 
@@ -636,9 +620,5 @@ footer {
 
   .experiences-container:nth-child(2) .experiences-box img {
     width: auto;
-  }
-
-  header {
-    background-color: blue; /* Para conseguir ver que está nessa resolução */
   }
 }
