@@ -486,7 +486,7 @@ footer {
 }
 
 /* Small Screen - Smartphones (Landscape) */
-@media (min-width: 576px) and (max-width: 767px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .menu-responsive {
     display: block;
   }
@@ -495,17 +495,14 @@ footer {
     display: none;
   }
   
-  .home-img, .about-img {
+  .home-img {
     width: 50%;
     max-width: 50%;
+    margin-left: 2rem;
   } 
 
-  .home-img {
-    margin-left: 2rem;
-  }
-
   .about-img {
-    margin-right: 2rem;
+    display: none;
   }
 
   .experiences-box {
