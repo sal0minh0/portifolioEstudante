@@ -5,7 +5,6 @@ const menuResponsivo = document.querySelector('.menu-responsive');
 // Quando algo acontecer com essa variável adicionar um evento para essa variável
 menuResponsivo.addEventListener('click', () => {
     mudarMenu();
-    console.log("Ok");
 });
 
 function mudarMenu() {
