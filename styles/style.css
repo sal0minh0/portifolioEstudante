@@ -81,8 +81,8 @@ header {
   left: 0;
   width: 100%;
   padding: 1rem;
-  background-color: gray; /* Teste, verificar se quer essa cor */
-
+  background-color: rgba(0, 0, 0, 0.3); /* Teste, verificar se quer essa cor */
+  backdrop-filter: blur(6px);
 }
 
 .nav a, .nav-responsive a {
@@ -96,6 +96,10 @@ header {
   font-optical-sizing: auto;
   font-style: normal;
   font-weight: 100%;
+}
+
+.nav-responsive a {
+  color: white; 
 }
 
 .nav a:hover, .nav-responsive a:hover {
@@ -282,7 +286,6 @@ span {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  padding: 0 4rem;
   transform: translateY(30rem);
   transition: 0.5s ease;
 
@@ -361,8 +364,6 @@ form textarea {
   resize: none;
 }
 
-
-
 footer {
   display: flex;
   flex-direction: row;
@@ -406,11 +407,11 @@ footer {
   height: 0.3rem;
   background-color: rgb(207, 90, 90);
   margin: 0.4rem 0;
-  transform: 0.3 ease;
+  cursor: pointer;
 }
 
 .change .bar1 {
-  transform: translate(0, 0.65rem) rotate(-45deg);
+  transform: translate(0, 0.73rem) rotate(-45deg);
 }
 
 .change .bar2 {
@@ -418,7 +419,7 @@ footer {
 }
 
 .change .bar3 {
-  transform: translate(0, -0.65rem) rotate(45deg);
+  transform: translate(0, -0.62rem) rotate(45deg);
 }
 
 /* Media Queries - 5 Screens */
@@ -617,6 +618,7 @@ footer {
 
   .portfolio-container {
     grid-template-columns: auto auto auto;
+    margin-top: 6rem;
   }
 
   .experiences-container:nth-child(2) .experiences-box img {

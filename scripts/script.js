@@ -22,4 +22,12 @@ function mudarMenu() {
     } else {
         nav.style.display = 'none';
     }
+
+    document.querySelectorAll('.nav-responsive a').forEach(link => {
+        link.addEventListener('click', () => {
+            menuResponsivo.classList.remove('change');
+            nav.style.display = 'none';
+        });
+    });
+    
 }
