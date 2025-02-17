@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portifólio Elisa</title>
-    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="styles/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 </head>
-<link rel="icon" type="image/x-icon" href="../assets/lawyer.ico">
+<link rel="icon" type="image/x-icon" href="assets/lawyer.ico">
 <!-- Body -->
 <body>
 <!-- Cabeçalho -->
@@ -55,12 +55,12 @@
             </div>
 
             <div>
-                <a href="../additional/curriculo.html" target="_blank" class="btn">Veja meu Currículo</a>
+                <a href="additional/curriculo.html" target="_blank" class="btn">Veja meu Currículo</a>
             </div>
         </div>
 
         <div class="home-img">
-            <img src="../assets/Adobe Express - file.png" alt="Minha Imagem Principal">
+            <img src="assets/Adobe Express - file.png" alt="Minha Imagem Principal">
         </div>
 
     </section>
@@ -71,7 +71,7 @@
 
             <div class="experiences-container">
                 <div class="experiences-box">
-                    <img src="../assets/scales.png" alt="lawyer-icon">
+                    <img src="assets/scales.png" alt="lawyer-icon">
                     <h3>Estagiária - Defensoria Pública de Pernambuco</h3>
 
                     <p>
@@ -81,7 +81,7 @@
                     <a href="https://www.defensoria.pe.def.br/quem-somos/" target="_blank" class="btn">Saiba Mais</a> 
                 </div>
                 <div class="experiences-box">
-                    <img src="../assets/advogada.png" alt="lawyer-icon">
+                    <img src="assets/advogada.png" alt="lawyer-icon">
                     <h3>Estagiária Escritório Advocacia Bezerra e Costa</h3>
 
                     <p>
@@ -99,7 +99,7 @@
 
         <div class="portfolio-container">
             <div class="portfolio-box">
-                <img src="../assets/definicoes-e-cocneitos-de-projeto.jpg" alt="Imagem do Projeto 1">
+                <img src="assets/definicoes-e-cocneitos-de-projeto.jpg" alt="Imagem do Projeto 1">
 
                 <div class="portfolio-layer">
                     <h4>Projeto 1</h4>
@@ -113,7 +113,7 @@
             </div>
 
             <div class="portfolio-box">
-                <img src="../assets/definicoes-e-cocneitos-de-projeto.jpg" alt="Imagem do Projeto 2">
+                <img src="assets/definicoes-e-cocneitos-de-projeto.jpg" alt="Imagem do Projeto 2">
 
                 <div class="portfolio-layer">
                     <h4>Projeto 2</h4>
@@ -127,7 +127,7 @@
             </div>
 
             <div class="portfolio-box">
-                <img src="../assets/definicoes-e-cocneitos-de-projeto.jpg" alt="Imagem do Projeto 3">
+                <img src="assets/definicoes-e-cocneitos-de-projeto.jpg" alt="Imagem do Projeto 3">
 
                 <div class="portfolio-layer">
                     <h4>Projeto 3</h4>
@@ -148,31 +148,31 @@
         <h2>Me <span>Contate:</span></h2>
 
         <form action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" id="access-key">
+            <input type="hidden" name="access_key" value="b94212c6-8769-47a6-a960-0a706d25f235">
             <input type="hidden" name="subject" value="Formulário para Contato">
-            <input type="hidden" name="form_name" value="Seu Portifólio">
+            <input type="hidden" name="nome formulário" value="Seu Portifólio">
 
             <div class="input-box">
-                    <input type="text" name="fullname" spellcheck="false" placeholder="Nome Completo">
+                    <input type="text" name="nome" spellcheck="false" placeholder="Nome Completo" required>
 
-                    <input type="email" name="email" spellcheck="false" placeholder="E-mail">
+                    <input type="email" name="e-mail" spellcheck="false" placeholder="E-mail" required>
             </div>
             <div class="input-box">
-                <input type="number" name="phone" spellcheck="false" placeholder="Celular">
+                <input type="number" name="celular" spellcheck="false" placeholder="Celular">
 
-                <input type="text" name="subject" spellcheck="false" placeholder="Assunto">
+                <input type="text" name="assunto" spellcheck="false" placeholder="Assunto">
             </div>
 
-            <textarea cols="30" rows="2" name="message" spellcheck="false" placeholder="Mensagem"></textarea>
+            <textarea cols="30" rows="2" name="mensagem" spellcheck="false" placeholder="Mensagem" required></textarea>
 
-            <button type="submit" class="btn-submit" onclick="enviarMensagem()">Enviar Mensagem</button>
+            <button type="submit" class="btn-submit">Enviar Mensagem</button>
         </form>
       </section>
 
       <!-- Sobre -->
        <section class="about" id="about">
         <div class="about-img">
-            <img src="../assets/Adobe Express - file.png" alt="Sobre eu">
+            <img src="assets/Adobe Express - file.png" alt="Sobre eu">
         </div>
         
         <div class="about-content">
@@ -190,18 +190,7 @@
         <p>Copyright &copy; 2025. Todos os Direitos Reservados.</p>
        </footer>
 </body>
-<script src="../scripts/botao.js"></script>
-<script>
-    // Carregue sua access_key de forma segura
-    const loadAccessKey = async () => {
-        try {
-            const response = await fetch('https://seu-projeto.vercel.app/api/get-web3forms-key');
-            const data = await response.json();
-            document.getElementById('access-key').value = data.accessKey;
-        } catch (error) {
-            console.error('Erro ao carregar access key:', error);
-        }
-    };
-</script>
+<script src="scripts/botao.js"></script>
+<script src="scripts/mensagem.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </html>
