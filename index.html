@@ -147,23 +147,24 @@
       <section class="contact" id="contact">
         <h2>Me <span>Contate:</span></h2>
 
-        <form novalidate action="">
-            <div class="input-box">
-                    <input id="obrigatorio" type="text" spellcheck="false" placeholder="Nome Completo*" required>
-
-                    <input id="obrigatorio" type="email" spellcheck="false" placeholder="E-mail*" required>
-            </div>
+        <form id="contactForm" action="/enviar-contato" method="POST" novalidate>
+            <input type="hidden" name="subject" value="Formulário para Contato">
+            <input type="hidden" name="form_name" value="Seu Portifólio">
 
             <div class="input-box">
-                <input type="number" spellcheck="false" placeholder="Celular">
+                    <input type="text" name="fullname" spellcheck="false" placeholder="Nome Completo">
 
-                <input id="obrigatorio" type="text" spellcheck="false" placeholder="Assunto*" required>
+                    <input type="email" name="email" spellcheck="false" placeholder="E-mail">
+            </div>
+            <div class="input-box">
+                <input type="number" name="phone" spellcheck="false" placeholder="Celular">
+
+                <input type="text" name="subject" spellcheck="false" placeholder="Assunto">
             </div>
 
-            <textarea id="obrigatorio" cols="30" rows="3" spellcheck="false" placeholder="Mensagem*" required></textarea>
+            <textarea cols="30" rows="2" name="message" spellcheck="false" placeholder="Mensagem"></textarea>
 
-            <a href="#" class="btn" onclick="enviarMensagem()">Enviar Mensagem</a>
-            <!-- Ver o video de como fazer o formulario e adpatar com meu codigo-->
+            <button type="submit" class="btn-submit" onclick="enviarMensagem()">Enviar Mensagem</button>
         </form>
       </section>
 

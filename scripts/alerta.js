@@ -8,6 +8,6 @@ function enviarMensagem() {
         confirmButtonColor: "rgba(128, 0, 0, 0.9)",
         backdrop: "rgba(0, 0, 0, 0.8)",
         heightAuto: true,
-        widthAuto: true
+        width: "28em"
       });
 }

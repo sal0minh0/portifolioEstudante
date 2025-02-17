@@ -47,7 +47,8 @@ h3 {
 }
 
 p,
-a {
+a,
+.btn-submit {
   font-family: "Nunito", serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -112,10 +113,6 @@ section {
 }
 
 span {
-  color: var(--main-color-02);
-}
-
-.btn {
   color: var(--main-color-02);
 }
 
@@ -258,6 +255,27 @@ span {
   cursor: pointer;
 }
 
+.btn-submit {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  background-color: var(--main-color-02);
+  border-radius: 2rem;
+  color: white;
+  font-weight: 600;
+  font-size: 108%;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  box-shadow: 0 0 0.3rem var(--main-color-02);
+  background-color: inherit;
+  color: black;
+  font-weight: 700;
+  cursor: pointer;
+}
+
 .portfolio-container {
   display: grid;
   gap: 1.2rem;
@@ -361,6 +379,7 @@ form textarea::placeholder {
 }
 
 form textarea {
+  font-family: "Nunito", serif;
   resize: none;
 }
 
