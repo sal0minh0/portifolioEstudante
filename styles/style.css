@@ -475,6 +475,10 @@ footer {
     max-width: 100%;
   }
 
+  .about-img {
+    display: none;
+  }
+
   .home-content, .about-content {
     width: 100%;
   }
@@ -502,6 +506,10 @@ footer {
   .experiences-container:nth-child(2) .experiences-box img {
     width: auto;
   }
+
+  footer p {
+    font-size: 90%;
+  }
 }
 
 /* Small Screen - Smartphones (Landscape) */
@@ -518,10 +526,12 @@ footer {
     width: 50%;
     max-width: 50%;
     margin-left: 2rem;
-  } 
-
+  }
+  
   .about-img {
-    display: none;
+    width: 50%;
+    max-width: 50%;
+    margin-right: 2rem;
   }
 
   .experiences-box {
