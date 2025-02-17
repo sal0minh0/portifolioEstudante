@@ -3,7 +3,7 @@ export default async function handler(req, res) {
         const { fullname, email, phone, subject, message } = req.body;
         const apiKey = process.env.YOUR_ACCESS_KEY;
         
-        const response = await fetch('https://api.we3forms.com/api/v1/form', {
+        const response = await fetch('https://api.web3forms.com/api/v1/form', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
