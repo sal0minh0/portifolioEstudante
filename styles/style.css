@@ -228,8 +228,8 @@ span {
 
   /* Para esconder e agrupar as linhas no Leia mais */
   display: -webkit-box;
-  -webkit-line-clamp: 4;
-  line-clamp: 4;
+  -webkit-line-clamp: 6;
+  line-clamp: 6;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis; 
@@ -547,6 +547,7 @@ footer {
   .experiences-container:nth-child(2) .experiences-box img {
     width: auto;
   }
+
 }
 
 /* Medium - Tablet */
