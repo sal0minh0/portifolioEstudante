@@ -511,6 +511,10 @@ footer {
   footer p {
     font-size: 90%;
   }
+
+  .experiences-box p {
+    font-size: 95%;
+  }
 }
 
 /* Small Screen - Smartphones (Landscape) */
