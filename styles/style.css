@@ -32,10 +32,11 @@
   border: none;
   outline: none;
   scroll-behavior: smooth;
+  color: lime;
 }
 
 body {
-  background-image: url(../assets/gray-floral.png);
+  background: black;
   font-family: "Nunito", serif;
 }
 
@@ -62,7 +63,7 @@ header {
   left: 0;
   width: 100%;
   padding: 1.1rem;
-  background-color: var(--color-01);
+  background-color: var(--color-11);
   display: flex;
   justify-content: space-between;
   align-items: center;
