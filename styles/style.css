@@ -3,7 +3,7 @@
 
 /* Importar fonte Merriweather */
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
-
+/* tirar essas cores fixas*/
 :root {
   --main-color-01: rebeccapurple;
   --main-color-02: maroon;
@@ -23,7 +23,7 @@
   --color-05: seashell;
 }
 
-/* Reset Css */
+/* Reset-CSS */
 * {
   margin: 0;
   padding: 0;
@@ -32,11 +32,11 @@
   border: none;
   outline: none;
   scroll-behavior: smooth;
-  color: lime;
+  color: #ECEFF4;
 }
 
 body {
-  background: black;
+  background: #1E1E2F;
   font-family: "Nunito", serif;
 }
 
@@ -63,7 +63,7 @@ header {
   left: 0;
   width: 100%;
   padding: 1.1rem;
-  background-color: var(--color-11);
+  background-color: #262639;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -115,14 +115,11 @@ section {
 }
 
 span {
-  color: var(--main-color-02);
+  color: rgb(220,20,60);
+  -webkit-text-stroke: .2px black;
 }
 
-.bxl-whatsapp-square {
-  color: lightgreen;
-}
-
-.bxl-linkedin-square {
+.bxl-linkedin {
   color: mediumblue;
 }
 
