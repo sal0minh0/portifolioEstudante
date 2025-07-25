@@ -3,27 +3,10 @@
 
 /* Importar fonte Merriweather */
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
-/* tirar essas cores fixas*/
-:root {
-  --main-color-01: rebeccapurple;
-  --main-color-02: maroon;
-  --text-color-01: rosybrown;
-  --text-color-02: thistle;
-  --text-color-03: wheat;
-  --bg-color-01: snow; 
-  --bg-color-02: oldlace;
-  --color-00: black;
-  --color-11:rgba(253, 245, 230, 0.274);
 
-  /* Extra */
-  --color-01: whitesmoke;
-  --color-02: lightpink;
-  --color-03: linen;
-  --color-04: cornsilk;
-  --color-05: seashell;
-}
+/* TODO Trocar essas fontes por uma Nerd Font */
 
-/* Reset-CSS */
+/* Reset-CSS */ 
 * {
   margin: 0;
   padding: 0;
@@ -32,11 +15,12 @@
   border: none;
   outline: none;
   scroll-behavior: smooth;
-  color: #ECEFF4;
-}
+  will-change: transform;
+  color: #eceff4;
+} 
 
 body {
-  background: #1E1E2F;
+  background: #1e1e2f;
   font-family: "Nunito", serif;
 }
 
@@ -68,11 +52,12 @@ header {
   justify-content: space-between;
   align-items: center;
   z-index: 100;
+  box-shadow: 0 0 1rem black;
 }
 
 .logo {
   font-size: 1.7rem;
-  color: rgb(207, 90, 90);
+  color: rgb(50, 205, 50);
   font-weight: 600;
   cursor: default;
 }
@@ -84,13 +69,14 @@ header {
   left: 0;
   width: 100%;
   padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.3); /* Teste, verificar se quer essa cor */
+  background-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(6px);
 }
 
-.nav a, .nav-responsive a {
+.nav a,
+.nav-responsive a {
   font-size: 1.2rem;
-  color: rgba(185, 83, 83, 0.6);
+  color: rgb(50, 205, 50);
   padding: 0.5rem 1rem;
   transition: 0.4s;
 
@@ -102,11 +88,12 @@ header {
 }
 
 .nav-responsive a {
-  color: white; 
+  color: white;
 }
 
-.nav a:hover, .nav-responsive a:hover {
-  color: rgb(185, 0, 0);
+.nav a:hover,
+.nav-responsive a:hover {
+  color: rgb(239, 238, 234);
 }
 
 section {
@@ -115,12 +102,8 @@ section {
 }
 
 span {
-  color: rgb(220,20,60);
-  -webkit-text-stroke: .2px black;
-}
-
-.bxl-linkedin {
-  color: mediumblue;
+  color: rgb(220, 20, 60);
+  -webkit-text-stroke: 0.1px black;
 }
 
 .home,
@@ -138,21 +121,22 @@ span {
   object-fit: cover;
 }
 
+/* FIXME Ajeitar a fonte não está visível */
 .experiences-box img {
   width: auto;
-  height: auto; 
-  max-width: 100%; 
-  max-height: 25vh; 
+  height: auto;
+  max-width: 100%;
+  max-height: 25vh;
 }
 
 .experiences-container:nth-child(2) .experiences-box img {
   width: 17vw;
   height: 40vh;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .experiences-container:nth-child(3) .experiences-box img {
-  width: 15vw; 
+  width: 15vw;
 }
 
 .home-content,
@@ -176,6 +160,10 @@ span {
 .about-content p {
   margin-top: 1.2rem;
   text-align: justify;
+}
+
+.about-content p {
+  margin-bottom: 2rem;
 }
 
 .experiences h2,
@@ -207,7 +195,7 @@ span {
   border-radius: 1.2rem;
   text-align: center;
   border: outset 0.2rem rgba(119, 119, 119, 0.5);
-  background-color: var(--color-01);
+  background-color: whitesmoke;
   transition: 0.5s ease;
 }
 
@@ -230,7 +218,7 @@ span {
   line-clamp: 8;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  text-overflow: ellipsis; 
+  text-overflow: ellipsis;
 }
 
 /* Botões */
@@ -239,7 +227,7 @@ span {
   margin-top: 1rem;
   display: inline-block;
   padding: 0.7rem 1.8rem;
-  background-color: var(--main-color-02);
+  background-color: rgba(128, 0, 0, 0.9);
   border-radius: 2rem;
   color: white;
   font-weight: 600;
@@ -247,28 +235,32 @@ span {
 }
 
 .btn:hover {
-  box-shadow: 0 0 0.3rem var(--main-color-02);
+  box-shadow: 0 0 0.3rem rgba(128, 0, 0, 0.8);
   background-color: inherit;
   color: black;
   font-weight: 700;
   cursor: pointer;
 }
 
+/*FIXME Trocar a cor para se adequar ao background */
+
 .btn-submit {
-  margin-top: 1rem;
+  margin-top: 2rem;
   display: inline-block;
   padding: 1rem 1.5rem;
-  background-color: var(--main-color-02);
+  background-color: rgba(128, 0, 0, 0.8);
+  -webkit-text-stroke: 0.2px black;
   border-radius: 2rem;
   color: white;
   font-weight: 600;
   font-size: 108%;
   letter-spacing: 0.1rem;
+  -webkit-text-stroke: 0.2px black;
   cursor: pointer;
 }
 
 .btn-submit:hover {
-  box-shadow: 0 0 0.3rem var(--main-color-02);
+  box-shadow: 0 0 0.3rem rgba(128, 0, 0, 0.8);
   background-color: inherit;
   color: black;
   font-weight: 700;
@@ -280,13 +272,15 @@ span {
   gap: 1.2rem;
 }
 
-.portfolio-box{
+.portfolio-box {
   display: flex;
   position: relative;
   border-radius: 0.6rem;
   box-shadow: 0 0 0 0.6rem rgba(0, 0, 0, 0.01);
   overflow: hidden;
 }
+
+/* FIXME Ajeitar a ultima portifolio box está com problema */
 
 .portfolio-box img {
   width: 100%;
@@ -311,7 +305,7 @@ span {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(transparent, var(--color-03));
+  background: linear-gradient(transparent, linen);
 }
 
 .portfolio-box:hover .portfolio-layer {
@@ -344,6 +338,8 @@ span {
   color: white;
 }
 
+/* FIXME Ajeitar esse formulário não está visível */
+
 form {
   max-width: 45rem;
   margin: 0.6rem auto;
@@ -355,7 +351,6 @@ form .input-box {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-
 }
 
 form .input-box input,
@@ -387,22 +382,24 @@ footer {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 1.2rem;
-  background-color: var(--color-01);
+  padding: 1rem 1rem 0.7rem;
+  background-color: #26263989;
+  box-shadow: 0 0 1rem black;
 }
 
-.social-media img {
-  width: 3.5rem;
+.social-media {
+  margin: 0.9rem 0 0.2rem 0;
 }
 
 .social-media a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 3rem;
-  background: transparent;
+  background: rgba(0, 0, 0, 0.2);
+
+  width: 4rem;
+  height: 4rem;
+  border-radius: 20%;
   margin: 1.3rem 0.4rem;
   transition: 0.5 ease;
 }
@@ -420,7 +417,9 @@ footer {
   cursor: pointer;
 }
 
-.bar1, .bar2, .bar3 {
+.bar1,
+.bar2,
+.bar3 {
   width: 2rem;
   height: 0.3rem;
   background-color: rgb(207, 90, 90);
@@ -440,12 +439,13 @@ footer {
   transform: translate(0, -0.62rem) rotate(45deg);
 }
 
+/*FIXME Ajeitar também o responsivo
+
 /* Media Queries - 5 Screens */
 
 /* Mobile First */
 /* Extra Small Screen - Smartphones (Portrait) */
 @media (min-width: 0px) and (max-width: 575px) {
-
   .menu-responsive {
     display: block;
   }
@@ -464,12 +464,14 @@ footer {
     padding: 6rem 2.5rem;
   }
 
-  .home, .about {
+  .home,
+  .about {
     flex-direction: column;
     gap: 1.2rem;
   }
 
-  .home-img, .about-img {
+  .home-img,
+  .about-img {
     width: 100%;
     max-width: 100%;
   }
@@ -478,7 +480,8 @@ footer {
     display: none;
   }
 
-  .home-content, .about-content {
+  .home-content,
+  .about-content {
     width: 100%;
   }
 
@@ -486,7 +489,8 @@ footer {
     text-align: center;
   }
 
-  .home-content h1, .about-content h1 {
+  .home-content h1,
+  .about-content h1 {
     font-size: 2.2rem;
     font-weight: 700;
     line-height: 1.3;
@@ -524,13 +528,13 @@ footer {
   .nav {
     display: none;
   }
-  
+
   .home-img {
     width: 50%;
     max-width: 50%;
     margin-left: 2rem;
   }
-  
+
   .about-img {
     width: 50%;
     max-width: 50%;
@@ -544,49 +548,52 @@ footer {
   .experiences-container {
     flex-direction: column;
     align-items: center;
-  } 
+  }
 
   .experiences-container:nth-child(2) .experiences-box img {
     width: auto;
   }
-
 }
 
 /* Medium - Tablet */
 @media (min-width: 768px) and (max-width: 991px) {
   .about-img {
     margin-right: 2rem;
-   }
-  
+  }
+
   .menu-responsive {
     display: none;
   }
-  
+
   .nav {
     display: block;
   }
 
-  .nav-responsive, .nav-responsive a {
+  .nav-responsive,
+  .nav-responsive a {
     display: none;
   }
 
-  .home, .about {
+  .home,
+  .about {
     flex-direction: row;
     justify-content: space-evenly;
   }
 
-  .home-img, .about-img {
+  .home-img,
+  .about-img {
     max-width: 40%;
   }
-  
-  .home-content, .about-content {
+
+  .home-content,
+  .about-content {
     width: 50%;
   }
-  
+
   .experiences-container {
     flex-direction: column;
     align-items: center;
-  } 
+  }
 
   .experiences-container:nth-child(2) .experiences-box img {
     width: auto;
@@ -608,7 +615,6 @@ footer {
 
 /* Large - Notebook */
 @media (min-width: 992px) and (max-width: 1199px) {
-
   .home-img {
     margin-left: 2rem;
   }
@@ -633,8 +639,8 @@ footer {
 
 /* Extra Large - Desktop */
 @media (min-width: 1200px) {
-
-  .home-img, .about-img {
+  .home-img,
+  .about-img {
     max-width: 100%;
   }
 
