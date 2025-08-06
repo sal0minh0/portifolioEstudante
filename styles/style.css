@@ -1,10 +1,11 @@
-/* Importar fonte Nunito */
+/* Fonte Nunito */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 
-/* Importar fonte Merriweather */
+/* Fonte Merriweather */
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
 
-/* TODO Trocar essas fontes por uma Nerd Font */
+/* Fonte Ubuntu Sans Mono */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap');
 
 /* Reset-CSS */ 
 * {
@@ -42,7 +43,7 @@ a,
 }
 
 header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -57,43 +58,69 @@ header {
 
 .logo {
   font-size: 1.7rem;
-  color: rgb(50, 205, 50);
-  font-weight: 600;
+  color: #00ffcc;
   cursor: default;
 }
 
+.nav {
+  padding-right: 1rem;
+  padding-bottom: .1rem;
+}
+
 .nav-responsive {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  backdrop-filter: blur(0px);
+  transition: backdrop-filter 1s ease;
+
   position: absolute;
   top: 100%;
   left: 0;
-  width: 100%;
+  width: 100vw;
+  min-height: 100dvh;
   padding: 1rem;
   background-color: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(6px);
+}
+
+.nav-responsive.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  backdrop-filter: blur(7px);
 }
 
 .nav a,
 .nav-responsive a {
   font-size: 1.2rem;
-  color: rgb(50, 205, 50);
-  padding: 0.5rem 1rem;
+  color: #00ffcc;
+  padding: 0.5rem 1.6rem;
   transition: 0.4s;
+  transition-delay: 0.1s;
 
-  font-family: "Nunito", serif;
-  font-weight: 400;
+  font-family: "Ubuntu Sans Mono", monospace;
+  font-weight: 600;
   font-optical-sizing: auto;
   font-style: normal;
-  font-weight: 100%;
+  font-size: 150%;
 }
 
 .nav-responsive a {
   color: white;
 }
 
-.nav a:hover,
+.nav a:hover {
+  color: #eceff4;
+  /*text-shadow: #558abb 2px 5px; --> outra opção*/
+   text-shadow: 5px 5px 5px black;
+}
+
 .nav-responsive a:hover {
-  color: rgb(239, 238, 234);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  height: 100%;
+  width: 100vw;
 }
 
 section {
@@ -170,7 +197,7 @@ span {
 .portfolio h2,
 .contact h2 {
   font-size: 2.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
@@ -338,45 +365,6 @@ span {
   color: white;
 }
 
-/* FIXME Ajeitar esse formulário não está visível */
-
-form {
-  max-width: 45rem;
-  margin: 0.6rem auto;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-form .input-box {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-form .input-box input,
-form textarea {
-  width: 100%;
-  padding: 1rem;
-  font-size: 1rem;
-  color: rgb(83, 0, 0);
-  border-radius: 0.5rem;
-  margin: 0.4rem 0;
-  text-decoration: none;
-
-  background-color: rgba(128, 45, 45, 0.2);
-}
-
-form input::placeholder,
-form textarea::placeholder {
-  font-family: "Nunito", serif;
-  color: rgba(0, 0, 0, 0.5);
-}
-
-form textarea {
-  font-family: "Nunito", serif;
-  resize: none;
-}
-
 footer {
   display: flex;
   flex-direction: row;
@@ -422,13 +410,16 @@ footer {
 .bar3 {
   width: 2rem;
   height: 0.3rem;
-  background-color: rgb(207, 90, 90);
+  background-color: rgba(219, 225, 227);
+  filter: blur(0.5px);
   margin: 0.4rem 0;
   cursor: pointer;
+  transition: transform 1s ease, opacity 0.2s ease;
+
 }
 
 .change .bar1 {
-  transform: translate(0, 0.73rem) rotate(-45deg);
+  transform: translate(0, 0.78rem) rotate(-45deg);
 }
 
 .change .bar2 {
@@ -437,15 +428,39 @@ footer {
 
 .change .bar3 {
   transform: translate(0, -0.62rem) rotate(45deg);
+
 }
 
-/*FIXME Ajeitar também o responsivo
+.botao-flutuante {
+  position: sticky;               
+  right: 15px;                   
+  bottom: 15px;  
+  margin-bottom: 2rem;
+  margin-left: 1rem;                           
+  cursor: pointer;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: solid white 4px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 11px;
+}
+
 
 /* Media Queries - 5 Screens */
 
 /* Mobile First */
 /* Extra Small Screen - Smartphones (Portrait) */
 @media (min-width: 0px) and (max-width: 575px) {
+  .botao-flutuante{
+    opacity: 0;
+  }
+
   .menu-responsive {
     display: block;
   }
@@ -456,7 +471,8 @@ footer {
 
   .nav-responsive a {
     display: block;
-    font-size: 1.2rem;
+    font-size: 180%;
+    padding: 1.2rem;
     margin: 0.5rem 0;
   }
 
@@ -519,8 +535,42 @@ footer {
   }
 }
 
-/* Small Screen - Smartphones (Landscape) */
-@media (min-width: 576px) and (max-width: 767px) {
+/* Small Screen - Smartphones (Landscape)- Part 1 */
+@media (min-width: 576px) and (max-width: 692px) {
+.botao-flutuante{
+    opacity: 0;
+  }
+
+  .menu-responsive {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .nav-responsive a {
+    display: block;
+    font-size: 180%;
+    padding: 1.2rem;
+    margin: 0.5rem 0;
+  }
+
+}
+  
+/* Small Screen - Smartphones (Landscape) - Part 2*/
+@media (min-width: 692px) and (max-width: 767px) {
+  .botao-flutuante{
+    opacity: 0;
+  }
+
+  .nav-responsive a {
+    display: block;
+    font-size: 180%;
+    padding: 1.2rem;
+    margin: 0.5rem 0;
+  }
+  
   .menu-responsive {
     display: block;
   }
@@ -557,6 +607,14 @@ footer {
 
 /* Medium - Tablet */
 @media (min-width: 768px) and (max-width: 991px) {
+
+  .nav-responsive a {
+    display: block;
+    font-size: 180%;
+    padding: 1.2rem;
+    margin: 0.5rem 0;
+  }
+  
   .about-img {
     margin-right: 2rem;
   }
@@ -577,7 +635,7 @@ footer {
   .home,
   .about {
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 
   .home-img,
@@ -607,14 +665,11 @@ footer {
   .portfolio-container {
     grid-template-columns: auto auto;
   }
-
-  form .input-box input {
-    width: 49%;
-  }
 }
 
 /* Large - Notebook */
 @media (min-width: 992px) and (max-width: 1199px) {
+  
   .home-img {
     margin-left: 2rem;
   }
@@ -654,7 +709,7 @@ footer {
 
   .portfolio-container {
     grid-template-columns: auto auto auto;
-    margin-top: 6rem;
+    margin-top: .5rem;
   }
 
   .experiences-container:nth-child(2) .experiences-box img {
