@@ -7,6 +7,8 @@
 /* Fonte Ubuntu Sans Mono */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap');
 
+
+/*TODO Revisar essas classes e ver se não tem alguma desnecessária e limpar o código*/
 /* Reset-CSS */ 
 * {
   margin: 0;
@@ -366,7 +368,7 @@ span {
 
 .portfolio-layer a i {
   font-size: 1.1rem;
-  color: white;
+  color: #eceff4;
 }
 
 footer {
@@ -439,19 +441,16 @@ footer {
 }
 
 .botao-flutuante {
-  position: sticky;               
-  right: 15px;                   
+  position: sticky;              
+  left: 15px;                   
   bottom: 15px;  
   margin-bottom: 2rem;
-  margin-left: 1rem;                           
+  margin-left: .5rem;                           
   cursor: pointer;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.6);
-  border: solid white 4px;
+  color: #eceff4;
+  background-color: transparent;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 2em;
+  font-size: 3em;
   display: flex;
   justify-content: center;
   align-items: center;
