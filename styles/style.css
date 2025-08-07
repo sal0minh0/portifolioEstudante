@@ -78,7 +78,7 @@ header {
   position: absolute;
   top: 100%;
   left: 0;
-  width: 100vw;
+  width: 100%;
   min-height: 100dvh;
   padding: 1rem;
   background-color: rgba(0, 0, 0, 0.3);
@@ -88,7 +88,7 @@ header {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  backdrop-filter: blur(7px);
+  backdrop-filter: blur(14px);
 }
 
 .nav a,
@@ -123,9 +123,18 @@ header {
   width: 100vw;
 }
 
+.home, .portfolio {
+  min-height: 90vh;
+  margin-bottom: 8rem;
+}
+
+.experiences {
+  margin-bottom: 6.9rem;
+}
+
 section {
-  min-height: 100vh;
-  padding: 5.7rem 3rem 3rem;
+  scroll-margin-top: 5rem;
+  padding: 1rem 5rem 0 5rem;
 }
 
 span {
@@ -133,16 +142,14 @@ span {
   -webkit-text-stroke: 0.1px black;
 }
 
-.home,
-.about {
+.home {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
 }
 
-.home-img img,
-.about-img img {
+.home-img img {
   width: 100%;
   height: 80vh;
   object-fit: cover;
@@ -166,31 +173,23 @@ span {
   width: 15vw;
 }
 
-.home-content,
-.about-content {
+.home-content {
   width: 45%;
 }
 
-.home-content h1,
-.about-content h1 {
+.home-content h1 {
   font-weight: 700;
   line-height: 1.3;
 }
 
-.home-content h3,
-.about-content h3 {
+.home-content h3 {
   font-weight: 700;
   font-size: 1.6rem;
 }
 
-.home-content p,
-.about-content p {
+.home-content p {
   margin-top: 1.2rem;
   text-align: justify;
-}
-
-.about-content p {
-  margin-bottom: 2rem;
 }
 
 .experiences h2,
@@ -375,8 +374,10 @@ footer {
   box-shadow: 0 0 1rem black;
 }
 
-.social-media {
-  margin: 0.9rem 0 0.2rem 0;
+.social-media { /*FIXME Centralizar essa Div */
+  padding: 4.4rem 0rem 0.2rem 11rem; 
+  justify-content: center;
+  align-items: center;
 }
 
 .social-media a {
@@ -385,8 +386,8 @@ footer {
   justify-content: center;
   background: rgba(0, 0, 0, 0.2);
 
-  width: 4rem;
-  height: 4rem;
+  width: 6rem;
+  height: 6rem;
   border-radius: 20%;
   margin: 1.3rem 0.4rem;
   transition: 0.5 ease;
@@ -461,6 +462,10 @@ footer {
     opacity: 0;
   }
 
+  section{
+    scroll-margin-top: 0;
+  }
+
   .menu-responsive {
     display: block;
   }
@@ -480,20 +485,14 @@ footer {
     padding: 6rem 2.5rem;
   }
 
-  .home,
-  .about {
+  .home {
     flex-direction: column;
     gap: 1.2rem;
   }
 
-  .home-img,
-  .about-img {
+  .home-img {
     width: 100%;
     max-width: 100%;
-  }
-
-  .about-img {
-    display: none;
   }
 
   .home-content,
@@ -518,8 +517,8 @@ footer {
   }
 
   .experiences-box {
-    width: 110%;
-    height: 80%;
+    width: 100%;
+    height: auto;
   }
 
   .experiences-container:nth-child(2) .experiences-box img {
