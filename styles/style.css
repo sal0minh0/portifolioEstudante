@@ -232,11 +232,13 @@ span {
 
 .experiences-box h3 {
   font-size: 1.5rem;
+  color: black;
 }
 
 .experiences-box p {
   margin: 0.5rem;
   letter-spacing: 0.1rem;
+  color: black;
 
   /* Para esconder e agrupar as linhas no Leia mais */
   display: -webkit-box;
@@ -341,11 +343,14 @@ span {
 .portfolio-layer h4 {
   cursor: default;
   font-size: 1.8rem;
+  color: black; /*TODO Ver se é essa cor mesmo 
+                  - adaptar com a imagem*/
 }
 
 .portfolio-layer p {
   cursor: default;
   margin: 0.2rem 0 0.5rem;
+  color: black;
 }
 
 .portfolio-layer a {
