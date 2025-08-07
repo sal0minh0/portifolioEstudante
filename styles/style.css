@@ -374,8 +374,9 @@ footer {
   box-shadow: 0 0 1rem black;
 }
 
-.social-media { /*FIXME Centralizar essa Div */
-  padding: 4.4rem 0rem 0.2rem 11rem; 
+.social-media { 
+  padding: 2rem 0rem 3rem 0; 
+  display:flex;
   justify-content: center;
   align-items: center;
 }
