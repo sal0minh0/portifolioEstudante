@@ -1,9 +1,10 @@
 /* Fonte Nunito */
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap'); /*400*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap'); /*700*/
 /* Fonte Merriweather */
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:opsz,wght@18..144,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:opsz,wght@18..144,900&display=swap'); /*900*/
 /* Fonte Ubuntu Sans Mono */
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:wght@600&display=swap'); /*600*/
 
 /*TODO Revisar essas classes e ver se não tem alguma desnecessária e limpar o código*/
 /* Reset-CSS */ 
@@ -16,7 +17,7 @@
   outline: none;
   scroll-behavior: smooth;
   will-change: transform;
-  color: #eceff4;
+  color: #F5F5F5;
 } 
 
 body {
@@ -144,10 +145,11 @@ span {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  gap: 5rem;
 }
 
 .home-img img {
-  width: 100%;
+  width: 80%;
   height: 80vh;
   object-fit: cover;
 }
@@ -183,9 +185,13 @@ span {
   font-size: 1.6rem;
 }
 
+
 .home-content p {
-  margin-top: 1.2rem;
+  margin-top: 2.2rem;
   text-align: justify;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  padding-left: .4rem; 
 }
 
 .experiences h2,
@@ -348,7 +354,7 @@ footer {
   box-shadow: 0 0 1rem black;
 }
 
-#ano_atual {
+#ano_atual, .span-home {
   font-weight: bold;
   color:#00ffcc;
 }
