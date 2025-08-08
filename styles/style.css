@@ -398,7 +398,6 @@ footer {
   width: 2rem;
   height: 0.3rem;
   background-color: rgba(219, 225, 227);
-  filter: blur(0.5px);
   margin: 0.4rem 0;
   cursor: pointer;
   transition: transform 1s ease, opacity 0.2s ease;
