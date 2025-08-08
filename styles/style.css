@@ -148,7 +148,8 @@ span {
   gap: 5rem;
 }
 
-.home-img img {
+.home-img img { /*FIXME Colocar a imagem mais pro lado direito para 
+                as palavras ficarem melhor*/
   width: 80%;
   height: 80vh;
   object-fit: cover;
