@@ -1,11 +1,9 @@
 /* Fonte Nunito */
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 /* Fonte Merriweather */
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:opsz,wght@18..144,900&display=swap');
 /* Fonte Ubuntu Sans Mono */
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:wght@600&display=swap');
 
 /*TODO Revisar essas classes e ver se não tem alguma desnecessária e limpar o código*/
 /* Reset-CSS */ 
@@ -34,8 +32,7 @@ h3 {
 }
 
 p,
-a,
-.btn-submit {
+a {
   font-family: "Nunito", serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -262,31 +259,6 @@ span {
 }
 
 .btn:hover {
-  box-shadow: 0 0 0.3rem rgba(128, 0, 0, 0.8);
-  background-color: inherit;
-  color: black;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-/*FIXME Trocar a cor para se adequar ao background */
-
-.btn-submit {
-  margin-top: 2rem;
-  display: inline-block;
-  padding: 1rem 1.5rem;
-  background-color: rgba(128, 0, 0, 0.8);
-  -webkit-text-stroke: 0.2px black;
-  border-radius: 2rem;
-  color: white;
-  font-weight: 600;
-  font-size: 108%;
-  letter-spacing: 0.1rem;
-  -webkit-text-stroke: 0.2px black;
-  cursor: pointer;
-}
-
-.btn-submit:hover {
   box-shadow: 0 0 0.3rem rgba(128, 0, 0, 0.8);
   background-color: inherit;
   color: black;
