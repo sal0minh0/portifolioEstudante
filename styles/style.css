@@ -2,8 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 /* Fonte Merriweather */
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:opsz,wght@18..144,900&display=swap');
 /* Fonte Ubuntu Sans Mono */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap');
 
@@ -24,7 +23,6 @@
 
 body {
   background: #1e1e2f;
-  font-family: "Nunito", serif;
 }
 
 h1,
@@ -157,7 +155,6 @@ span {
   object-fit: cover;
 }
 
-/* FIXME Ajeitar a fonte não está visível */
 .experiences-box img {
   width: auto;
   height: auto;
@@ -310,8 +307,6 @@ span {
   overflow: hidden;
 }
 
-/* FIXME Ajeitar a ultima portifolio box está com problema */
-
 .portfolio-box img {
   width: 100%;
   transition: 0.5 ease;
@@ -379,6 +374,11 @@ footer {
   padding: 1rem 1rem 0.7rem;
   background-color: #26263989;
   box-shadow: 0 0 1rem black;
+}
+
+#ano_atual {
+  font-weight: bold;
+  color:#00ffcc;
 }
 
 .social-media { 
