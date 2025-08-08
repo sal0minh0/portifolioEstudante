@@ -8,7 +8,6 @@
     <title>Site Dev</title>
 
     <!-- Favicon -->
-    <!--TODO Trocar esse ícone pelo o do meu github-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 
     <!-- Estilos -->
@@ -85,9 +84,8 @@
         </p>
 
         <div>
-          <a href="additional/curriculo.html" target="_blank" class="btn" 
-            >Veja meu Currículo</a> <!-- TODO Colocar meu currículo aqui -->
-          
+          <a href="additional/curriculo.html" target="_blank" 
+          class="btn">Veja meu Currículo</a>
         </div>
       </div>
 
@@ -268,7 +266,6 @@
       </div>
     </section>
 
-<!--FIXME Ajeitar esse contatos-->
     <!-- Contato -->
     <section class="contact" id="contact">
       <h2>Me <span>Contate:</span></h2>
@@ -321,9 +318,10 @@
     <!-- Rodapé -->
 
     <footer class="footer" id="footer">
-      <p>Copyright &copy; 2025. Todos os Direitos Reservados.</p>
+      <p>Copyright &copy; <span id="ano_atual"></span> - Todos os Direitos Reservados</p>
     </footer>
   </body>
+  <script src="scripts/ano-atual.js"></script>
   <script src="scripts/botao-responsivo.js"></script>
   <script src="scripts/esconde-botao-flutuante.js"></script>
 </html>
