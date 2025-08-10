@@ -261,18 +261,26 @@ span {
   margin-top: 1rem;
   display: inline-block;
   padding: 0.7rem 1.8rem;
-  background-color: rgba(128, 0, 0, 0.9);
   border-radius: 2rem;
   color: white;
   font-weight: 600;
   letter-spacing: 0.1rem;
+  transition: 1s;
+}
+
+#btn-curriculo {
+  background-color: rgba(128, 0, 0, 0.8);
+}
+
+#btn-saiba1, #btn-saiba2 {
+  background-color: rgba(128, 0, 0, 0.9);
 }
 
 .btn:hover {
-  box-shadow: 0 0 0.3rem rgba(128, 0, 0, 0.8);
-  background-color: inherit;
-  color: black;
-  font-weight: 700;
+  box-shadow: 0 0 1rem white;
+  background-color: rgb(128, 0, 0);
+  color: white;
+  font-weight: bold;
   cursor: pointer;
 }
 
@@ -287,11 +295,17 @@ span {
   border-radius: 0.6rem;
   box-shadow: 0 0 0 0.6rem rgba(0, 0, 0, 0.01);
   overflow: hidden;
+  width: 100%;
+  aspect-ratio: 16/9; 
+  align-items: center;
+  justify-content: center;
 }
 
 .portfolio-box img {
   width: 100%;
-  transition: 0.5 ease;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
 }
 
 .portfolio-box img:hover {
@@ -322,8 +336,8 @@ span {
 .portfolio-layer h4 {
   cursor: default;
   font-size: 1.8rem;
-  color: black; /*TODO Ver se é essa cor mesmo 
-                  - adaptar com a imagem*/
+  color: black; 
+  font-family: "Ubuntu Mono Sans", monospace;
 }
 
 .portfolio-layer p {
@@ -405,7 +419,6 @@ footer {
   margin: 0.4rem 0;
   cursor: pointer;
   transition: transform 1s ease, opacity 0.2s ease;
-
 }
 
 .change .bar1 {
@@ -531,6 +544,14 @@ footer {
     opacity: 0;
   }
 
+  .btn {
+    letter-spacing: normal;
+  }
+
+  .home {
+    flex-direction: column;
+  }
+
   .social-media a {
     width: 5rem;
     height: 5rem;
@@ -559,6 +580,10 @@ footer {
     opacity: 0;
   }
 
+  .home {
+    flex-direction: column;
+  }
+
   .nav-responsive a {
     display: block;
     font-size: 180%;
@@ -575,8 +600,8 @@ footer {
   }
 
   .home-img {
-    width: 120%;
-    max-width: 120%;
+    width: 80%;
+    max-width: 80%;
     margin-left: 2rem;
   }
 
