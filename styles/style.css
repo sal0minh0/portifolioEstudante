@@ -511,7 +511,12 @@ footer {
     gap: 1.2rem;
   }
 
+  .home p {
+    letter-spacing: normal;
+  }
+
   .home-img {
+    padding-top: 20px;
     width: 100%;
     max-width: 100%;
   }
@@ -542,7 +547,7 @@ footer {
   }
 
   .experiences-box {
-    width: 100%;
+    width: 130%;
     height: auto;
   }
 
@@ -600,7 +605,7 @@ footer {
   .experiences-container:nth-child(2) .experiences-box img {
     width: auto;
   }
-  
+
   .experiences-container {
     flex-direction: column;
     align-items: center;
