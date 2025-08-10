@@ -130,9 +130,21 @@ header {
   margin-bottom: 6.9rem;
 }
 
-section {
+.home, .experiences, .contact {
   scroll-margin-top: 5rem;
   padding: 1rem 5rem 0 5rem;
+}
+
+.portfolio {
+  scroll-margin-top: 5rem;
+  padding: 1rem 0 0 0;
+}
+
+.home, 
+.portfolio, 
+.experiences {
+  padding-bottom: 8rem;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.6);
 }
 
 span {
@@ -199,10 +211,14 @@ span {
 }
 
 .experiences h2,
-.portfolio h2,
-.contact h2 {
+.portfolio h2 {
   font-size: 2.2rem;
   margin-bottom: 1rem;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.2rem;
   text-align: center;
 }
 
@@ -238,6 +254,7 @@ span {
 
 .experiences-box h3 {
   font-size: 1.5rem;
+  font-family: "Ubuntu Sans Mono", monospace;
   color: black;
 }
 
@@ -309,7 +326,7 @@ span {
 }
 
 .portfolio-box img:hover {
-  transform: scale(1.1);
+  transform: scale(1.5);
 }
 
 .portfolio-box .portfolio-layer {
@@ -378,7 +395,7 @@ footer {
 }
 
 .social-media { 
-  padding: 2rem 0rem 3rem 0; 
+  padding: 0 0rem 3rem 0; 
   display:flex;
   justify-content: center;
   align-items: center;
@@ -452,7 +469,7 @@ footer {
 }
 
 
-/* Media Queries - 5 Screens */
+/* Media Queries - 6 Screens */
 
 /* Mobile First */
 /* Extra Small Screen - Smartphones (Portrait) */
@@ -515,6 +532,10 @@ footer {
     line-height: 1.3;
   }
 
+  .portfolio {
+    padding: 0 1rem 8rem 1rem;
+  }
+
   .experiences-container {
     flex-direction: column;
     align-items: center;
@@ -544,6 +565,10 @@ footer {
     opacity: 0;
   }
 
+  .portfolio {
+    padding: 0 1rem 8rem 1rem;
+  }
+
   .btn {
     letter-spacing: normal;
   }
@@ -570,6 +595,15 @@ footer {
     font-size: 180%;
     padding: 1.2rem;
     margin: 0.5rem 0;
+  }
+
+  .experiences-container:nth-child(2) .experiences-box img {
+    width: auto;
+  }
+  
+  .experiences-container {
+    flex-direction: column;
+    align-items: center;
   }
 
 }
@@ -609,6 +643,10 @@ footer {
     width: 50%;
     max-width: 50%;
     margin-right: 2rem;
+  }
+
+  .portfolio {
+    padding: 0 1rem 8rem 1rem;
   }
 
   .experiences-box {
@@ -667,6 +705,10 @@ footer {
   .about-content {
     width: 50%;
   }
+  
+  .portfolio {
+    padding: 0 .5rem 8rem .5rem;
+  }
 
   .experiences-container {
     flex-direction: column;
@@ -703,6 +745,10 @@ footer {
     gap: 1.2rem;
   }
 
+  .portfolio {
+    padding: 0 .5rem 8rem .5rem;
+  }
+
   .portfolio-container {
     grid-template-columns: auto auto;
   }
@@ -725,6 +771,10 @@ footer {
 
   .home-content h3 {
     font-size: 2rem;
+  }
+
+  .portfolio {
+    padding: 0 .5rem 8rem .5rem;
   }
 
   .portfolio-container {
