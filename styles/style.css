@@ -6,7 +6,6 @@
 /* Fonte Ubuntu Sans Mono */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:wght@600&display=swap'); /*600*/
 
-/*TODO Revisar essas classes e ver se não tem alguma desnecessária e limpar o código*/
 /* Reset-CSS */ 
 * {
   margin: 0;
